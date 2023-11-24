@@ -146,15 +146,12 @@ def main():
         line = fptr.readline().split()
         for j in range(len(line)):
             A[i, j] = float(line[j])
-    z = np.asarray(list(map(float, fptr.readline().split())))        
     b = np.asarray(list(map(float, fptr.readline().split())))
     c = np.asarray(list(map(float, fptr.readline().split())))
-    
-   
-    print(f" A : {A} \n B : {b} \n C : {c} \n  X : {z}")
+
+    print(f" A : {A} \n B : {b} \n C : {c} \n ")
     print("-------------------------------------------")
-    a = np.dot(c,z)
-    print(f"Initial value of the objective function : {a}")
+
     simplex_algorithm(A,b,c)
 
 if __name__ == '__main__':
